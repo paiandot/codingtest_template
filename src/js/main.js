@@ -1,4 +1,20 @@
 import "@babel/polyfill";
-import data from "./data";
+import dataContainer from "./data";
+import solution from "./solution";
+import test from "./test";
 
-console.log(data);
+for(const data of dataContainer) {
+  const solRes = solution(data);
+  const testRes = test(data);  
+  
+  if(solRes !== testRes){
+    const temp = {
+      "data": data,
+      "solutionRes": solRes,
+      "testRes": testRes
+    }
+    console.log(temp);
+  }
+}
+
+

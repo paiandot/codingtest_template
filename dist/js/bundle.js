@@ -10256,31 +10256,35 @@ try {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var data = [{
-  "input": "input 1222",
+var small = [{
+  "input": "small",
   "output": "output 1"
 }, {
   "input": "",
   "output": ""
-}, {
-  "input": "",
-  "output": ""
-}, {
-  "input": "",
-  "output": ""
-}, {
-  "input": "",
-  "output": ""
-}, {
-  "input": "",
-  "output": ""
-}, {
-  "input": "",
-  "output": ""
+}];
+var medium = [{
+  "input": "medium",
+  "output": "output 1"
 }, {
   "input": "",
   "output": ""
 }];
+var large = [{
+  "input": "large",
+  "output": "output 1"
+}, {
+  "input": "",
+  "output": ""
+}];
+var userCase = [{
+  "input": "user case",
+  "output": "output 1"
+}, {
+  "input": "",
+  "output": ""
+}];
+var data = [].concat(userCase, small, medium, large);
 /* harmony default export */ __webpack_exports__["default"] = (data);
 
 /***/ }),
@@ -10297,9 +10301,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/polyfill */ "./node_modules/@babel/polyfill/lib/index.js");
 /* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_polyfill__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data */ "./src/js/data.js");
+/* harmony import */ var _solution__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./solution */ "./src/js/solution.js");
+/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./test */ "./src/js/test.js");
 
 
-console.log(_data__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+  for (var _iterator = _data__WEBPACK_IMPORTED_MODULE_1__["default"][Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    var data = _step.value;
+    var solRes = Object(_solution__WEBPACK_IMPORTED_MODULE_2__["default"])(data);
+    var testRes = Object(_test__WEBPACK_IMPORTED_MODULE_3__["default"])(data);
+
+    if (solRes !== testRes) {
+      var temp = {
+        "data": data,
+        "solutionRes": solRes,
+        "testRes": testRes
+      };
+      console.log(temp);
+    }
+  }
+} catch (err) {
+  _didIteratorError = true;
+  _iteratorError = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+      _iterator["return"]();
+    }
+  } finally {
+    if (_didIteratorError) {
+      throw _iteratorError;
+    }
+  }
+}
+
+/***/ }),
+
+/***/ "./src/js/solution.js":
+/*!****************************!*\
+  !*** ./src/js/solution.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function solution(data) {
+  return "function 1";
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (solution);
+
+/***/ }),
+
+/***/ "./src/js/test.js":
+/*!************************!*\
+  !*** ./src/js/test.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function test(data) {
+  return "function 2";
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (test);
 
 /***/ }),
 
