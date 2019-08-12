@@ -7,7 +7,7 @@ for(const data of dataContainer) {
   const solRes = solution(data);
   const testRes = test(data);  
   
-  if(solRes !== testRes){
+  if(data.output !== solRes || solRes !== testRes){
     const temp = {
       "data": data,
       "solutionRes": solRes,
@@ -16,5 +16,3 @@ for(const data of dataContainer) {
     console.log(temp);
   }
 }
-
-
